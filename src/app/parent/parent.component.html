@@ -1,0 +1,16 @@
+<p>
+  parent works!
+</p>
+<app-child #childcomp></app-child>
+{{childcomp.childcount}} I am In parrent: <button (click)='childcomp.iamchildmetod()'>call</button>
+
+<hr>
+
+<h1>child input calling from parent refernce:</h1>
+<app-child-input [parentInput]='parentelement'></app-child-input>
+
+<hr>
+<h1>Calling Parent Method from child:</h1>
+<app-child-output (change)='ParentMethodcall()'></app-child-output>
+
+
