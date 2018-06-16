@@ -11,5 +11,11 @@ export class ParentComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  printcount;
+  parentmethod(counter){
+    return this.printcount= counter;
+    
+  }
 
 }
