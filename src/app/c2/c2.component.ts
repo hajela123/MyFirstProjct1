@@ -12,4 +12,9 @@ export class C2Component implements OnInit {
   ngOnInit() {
   }
 
+  contactNumber = '';
+
+  getContacts(){
+    return 
+  }
 }

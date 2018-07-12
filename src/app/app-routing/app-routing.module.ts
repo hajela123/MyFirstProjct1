@@ -5,6 +5,7 @@ import { C2Component } from '../c2/c2.component';
 import { C3Component } from '../c3/c3.component';
 import { DefaultComponent } from '../default/default.component';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
+import { EmptyContactService } from '../empty-contact.service';
 
 
 
@@ -12,8 +13,9 @@ const routes: Routes = [
   {path: 'c1', component: C1Component},
   {path: 'c2', component: C2Component},
   {path: 'c3', component: C3Component},
-  {path: '', component: DefaultComponent},
-  {path: '**', component: PagenotfoundComponent}
+  {path: '', component: DefaultComponent, pathMatch:'full'},
+  {path: '**', component: PagenotfoundComponent},
+  {path: 'c2', component: C2Component , canDeactivate : [EmptyContactService]},
 
 ];
 
